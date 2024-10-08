@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad Web - Inicio</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Accesibilidad web</h1> 
+
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg">
+        <form class="container-fluid justify-content-center">
+            <a href="#que_es"><button class="btn btn-primary btn-lg me-2" type="button">¿Qué es?</button></a>            
+            <a href="#importancia"><button class="btn btn-primary btn-lg me-5" type="button">Importancia</button></a>            
+            <a href="#Perceptible"><button class="btn btn-outline-success me-2" type="button">Perceptible</button></a>            
+            <a href="#Operable"><button class="btn btn-outline-success me-2" type="button">Operable</button></a>
+            <a href="#Comprensible"><button class="btn btn-outline-success me-2" type="button">Comprensible</button></a>
+            <a href="#Robusto"><button class="btn btn-outline-success me-2" type="button">Robusto</button></a>
+        </form>
+    </nav>   
+
+    <!-- Secciones Informativa -->
+    <section id="que_es">
+        <h2>¿Qué es la Accesibilidad web?</h2>
+        <p>La accesibilidad web se refiere a la creación de sitios web diseñados para ser utilizados por todas las personas, incluidas aquellas con discapacidades motrices, sensoriales o cognitivas. Su objetivo principal es eliminar las barreras que impiden que estos usuarios puedan navegar, interactuar y entender el contenido de la página web
+            Los beneficios de la accesibilidad web incluyen una mejor usabilidad, posicionamiento SEO, mayor compatibilidad con dispositivos, y el aumento de visitas potenciales
+            </p>
+        <p class="fuente">Fuente: <a href="https://www.iberdrola.com/innovacion/que-es-accesibilidad-web" target="_blank">¿Qué es la accesibilidad web? El gran reto para conseguir un Internet para todos</a></p>
+    </section>       
+    
+    <section id="importancia">
+        <h2>¿Cuál es su importancia?</h2>
+        <p>Una página web accesible puede facilitar que las personas con discapacidad se involucren más activamente en la sociedad, ya que internet es un recurso clave en muchos ámbitos de la vida, incluyendo la educación, el empleo, el gobierno, el comercio, la salud, el entretenimiento y más</p>
+        <p class="fuente">Fuente: <a href="https://accesibilidadweb.dlsi.ua.es/?menu=por-que-accesibilidad-web-importante" target="_blank">¿Por qué la accesibilidad web es importante?</a></p>
+    </section> 
+
+    <!-- Secciones de contenido -->
+    <section id="Perceptible">
+        <h2>Perceptible</h2>
+        <p>El contenido que se muestre en un sitio debe ser distinguido por todos y ofreciendo diferentes alternativas a los contenidos mostrados para que sea entendida por cualquier persona</p>
+        <p><strong>Ejemplo: </strong>Este video tiene subtítulos para personas con discapacidad auditiva y una transcripción completa</p>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wOL0aHyaW2I?cc_load_policy=1" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </section>    
+    
+
+    <section id="Operable">
+        <h2>Operable</h2>
+        <p>Los usuarios deben poder interactuar sin dificultad con el sitio web, ya sea utilizando el teclado u otros medios de entrada, asegurando una navegación fluida y accesible en todo momento</p>
+        <p><strong>Ejemplo: </strong> En un sitio de comercio electrónico, los usuarios pueden navegar y realizar compras utilizando solo el teclado, sin la necesidad de un ratón</p>
+
+        <button type="submit" tabindex="0" class="btn btn-primary btn-sm mb-3">Al darle "Alt" se podra interactuar con este botón</button>
+    </section>
+
+    <section id="Comprensible">
+        <h2>Comprensible</h2>
+        <p>La información debe ser presentada de manera clara, accesible y sencilla de interpretar, asegurando que las páginas tengan una estructura predecible y que los formularios incluyan guías o asistencias que faciliten su correcto uso</p>
+        <p><strong>Ejemplo: </strong>Una página utiliza etiquetas claras y ayudas visuales en sus formularios, como mensajes emergentes que explican qué información debe ser ingresada en cada campo</p>
+        
+        <form id="miFormulario">
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required minlength="8" maxlength="30">
+                <label for="floatingPassword">Contraseña</label>
+                <small>La contraseña debe tener mínimo 8 caracteres.</small><br><br>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary btn-sm mb-3">Enviar</button>
+            </div>
+        </form>
+        <div id="mensajeError" class="text-danger" style="display: none;">
+            La contraseña debe tener mínimo 8 caracteres.
+        </div>
+    </section>
+    
+
+    
+    <section id="Robusto">
+        <h2>Robusto</h2>
+        <p>El contenido debe ser adaptable y funcionar correctamente con una variedad de tecnologías, incluidos dispositivos de asistencia como los lectores de pantalla, garantizando una experiencia consistente y accesible para todos los usuarios</p>
+        <p><strong>Ejemplo:</strong> Un sitio web es accesible en distintos navegadores y dispositivos, y funciona correctamente con herramientas como lectores de pantalla o ampliadores de texto</p>
+        <button onclick="mostrar()" "button" class="btn btn-primary btn-sm">Ver algunos ejemplos</button>
+        <div id="ejemploConsistencia" style="display: none;" class="mt-3">
+            <div class="card-group">
+                <div class="card">
+                <img src="./imagenes/ejemplo1.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+            </div>
+                </div>
+                <div class="card">
+                <img src="./imagenes/ejemplo2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+            </div>
+                </div>
+                <div class="card">
+                <img src="./imagenes/ejemplo4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+            </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function mostrar() {
+                document.getElementById('ejemploConsistencia').style.display = 'block';
+            }
+        </script>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <a href="#" class="btn-flotante"><i class="bi bi-arrow-up"></i></a>
+        <p>&copy; 2° Proyecto de Investigación - Dixon Rodriguez Cubero</p>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
